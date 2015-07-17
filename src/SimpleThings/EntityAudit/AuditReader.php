@@ -33,11 +33,11 @@ use SimpleThings\EntityAudit\Utils\ArrayDiff;
 
 class AuditReader
 {
-    private $em;
+    protected $em;
 
-    private $config;
+    protected $config;
 
-    private $metadataFactory;
+    protected $metadataFactory;
 
     /**
      * @param EntityManager $em
@@ -138,7 +138,7 @@ class AuditReader
      * @param array $data
      * @return object
      */
-    private function createEntity($className, array $data)
+    protected function createEntity($className, array $data)
     {
         $class = $this->em->getClassMetadata($className);
         $entity = $class->newInstance();

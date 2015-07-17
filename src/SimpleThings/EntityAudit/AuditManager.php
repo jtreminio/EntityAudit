@@ -13,9 +13,9 @@ use SimpleThings\EntityAudit\EventListener\LogRevisionsListener;
  */
 class AuditManager
 {
-    private $config;
+    protected $config;
 
-    private $metadataFactory;
+    protected $metadataFactory;
 
     /**
      * @param AuditConfiguration $config

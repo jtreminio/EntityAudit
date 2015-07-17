@@ -36,11 +36,11 @@ class CurrentUserListener
     /**
      * @var AuditConfiguration
      */
-    private $auditConfiguration;
+    protected $auditConfiguration;
     /**
      * @var SecurityContext
      */
-    private $securityContext;
+    protected $securityContext;
     
     public function __construct(AuditConfiguration $config, SecurityContext $context = null)
     {

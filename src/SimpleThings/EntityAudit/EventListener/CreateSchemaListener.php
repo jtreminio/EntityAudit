@@ -34,12 +34,12 @@ class CreateSchemaListener implements EventSubscriber
     /**
      * @var \SimpleThings\EntityAudit\AuditConfiguration
      */
-    private $config;
+    protected $config;
 
     /**
      * @var \SimpleThings\EntityAudit\Metadata\MetadataFactory
      */
-    private $metadataFactory;
+    protected $metadataFactory;
 
     public function __construct(AuditManager $auditManager)
     {

@@ -25,10 +25,10 @@ namespace SimpleThings\EntityAudit;
 
 class ChangedEntity
 {
-    private $className;
-    private $id;
-    private $revType;
-    private $entity;
+    protected $className;
+    protected $id;
+    protected $revType;
+    protected $entity;
     
     public function __construct($className, array $id, $revType, $entity)
     {

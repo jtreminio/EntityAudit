@@ -28,9 +28,9 @@ namespace SimpleThings\EntityAudit;
  */
 class Revision
 {
-    private $rev;
-    private $timestamp;
-    private $username;
+    protected $rev;
+    protected $timestamp;
+    protected $username;
 
     function __construct($rev, $timestamp, $username)
     {
