@@ -3,6 +3,12 @@
 This extension for Doctrine 2 is inspired by [Hibernate Envers](http://www.jboss.org/envers) and
 allows full versioning of entities and their associations.
 
+## Forked
+
+Forked from [simplethings/EntityAudit](https://github.com/simplethings/EntityAudit)
+
+Changes all `private` methods and properties to `protected` to allow extending.
+
 ## How does it work?
 
 There are a bunch of different approaches to auditing or versioning of database tables. This extension
@@ -27,7 +33,7 @@ create the necessary DDL statements for your audited entities.
 Simply run assuming you have installed composer.phar or composer binary:
 
 ``` bash
-$ php composer.phar require simplethings/entity-audit-bundle
+$ php composer.phar require jtreminio/entity-audit-bundle
 ```
 
 ###Enable the bundle
@@ -241,4 +247,4 @@ This provides you with a few different routes:
 * Currently only works with auto-increment databases
 * Proper metadata mapping is necessary, allow to disable versioning for fields and associations.
 * It does NOT work with Joined-Table-Inheritance (Single Table Inheritance should work, but not tested)
-* Many-To-Many assocations are NOT versioned
+* Many-To-Many associations are NOT versioned
