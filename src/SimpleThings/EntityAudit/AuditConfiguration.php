@@ -27,15 +27,15 @@ use Doctrine\ORM\Mapping\ClassMetadataInfo;
 
 class AuditConfiguration
 {
-    private $prefix = '';
-    private $suffix = '_audit';
-    private $revisionFieldName = 'rev';
-    private $revisionTypeFieldName = 'revtype';
-    private $revisionTableName = 'revisions';
-    private $auditedEntityClasses = array();
-    private $globalIgnoreColumns = array();
-    private $currentUsername = '';
-    private $revisionIdFieldType = 'integer';
+    protected $prefix = '';
+    protected $suffix = '_audit';
+    protected $revisionFieldName = 'rev';
+    protected $revisionTypeFieldName = 'revtype';
+    protected $revisionTableName = 'revisions';
+    protected $auditedEntityClasses = array();
+    protected $globalIgnoreColumns = array();
+    protected $currentUsername = '';
+    protected $revisionIdFieldType = 'integer';
 
     /**
      * @param ClassMetadataInfo $metadata

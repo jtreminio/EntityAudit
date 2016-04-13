@@ -43,47 +43,47 @@ class AuditReader
     /**
      * @var EntityManagerInterface
      */
-    private $em;
+    protected $em;
 
     /**
      * @var AuditConfiguration
      */
-    private $config;
+    protected $config;
 
     /**
      * @var MetadataFactory
      */
-    private $metadataFactory;
+    protected $metadataFactory;
 
     /**
      * Entity cache to prevent circular references
      * @var array
      */
-    private $entityCache;
+    protected $entityCache;
 
     /**
      * Decides if audited ToMany collections are loaded
      * @var bool
      */
-    private $loadAuditedCollections = true;
+    protected $loadAuditedCollections = true;
 
     /**
      * Decides if audited ToOne collections are loaded
      * @var bool
      */
-    private $loadAuditedEntities = true;
+    protected $loadAuditedEntities = true;
 
     /**
      * Decides if native (not audited) ToMany collections are loaded
      * @var bool
      */
-    private $loadNativeCollections = true;
+    protected $loadNativeCollections = true;
 
     /**
      * Decides if native (not audited) ToOne collections are loaded
      * @var bool
      */
-    private $loadNativeEntities = true;
+    protected $loadNativeEntities = true;
 
     /**
      * @return boolean

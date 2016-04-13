@@ -41,47 +41,47 @@ class LogRevisionsListener implements EventSubscriber
     /**
      * @var \SimpleThings\EntityAudit\AuditConfiguration
      */
-    private $config;
+    protected $config;
 
     /**
      * @var \SimpleThings\EntityAudit\Metadata\MetadataFactory
      */
-    private $metadataFactory;
+    protected $metadataFactory;
 
     /**
      * @var \Doctrine\DBAL\Connection
      */
-    private $conn;
+    protected $conn;
 
     /**
      * @var \Doctrine\DBAL\Platforms\AbstractPlatform
      */
-    private $platform;
+    protected $platform;
 
     /**
      * @var \Doctrine\ORM\EntityManager
      */
-    private $em;
+    protected $em;
 
     /**
      * @var array
      */
-    private $insertRevisionSQL = array();
+    protected $insertRevisionSQL = array();
 
     /**
      * @var \Doctrine\ORM\UnitOfWork
      */
-    private $uow;
+    protected $uow;
 
     /**
      * @var int
      */
-    private $revisionId;
+    protected $revisionId;
 
     /**
      * @var array
      */
-    private $extraUpdates = array();
+    protected $extraUpdates = array();
 
     public function __construct(AuditManager $auditManager)
     {
