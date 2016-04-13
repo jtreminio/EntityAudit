@@ -333,7 +333,7 @@ class AuditReader
      * @throws \Exception
      * @return object
      */
-    private function createEntity($className, array $data, $revision)
+    protected function createEntity($className, array $data, $revision)
     {
         /** @var ClassMetadataInfo|ClassMetadata $class */
         $class = $this->em->getClassMetadata($className);
